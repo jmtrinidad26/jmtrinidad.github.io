@@ -1,0 +1,30 @@
+@media only screen and (max-width: 760px) {
+    body {
+        font-size: 17px;
+    }
+    .button {
+        width: 100%;
+    }
+    .nav-container{
+        display:none;
+    }
+    header{
+        justify-content: center;
+    }
+    .title{
+        color:white;
+    }
+    #Profile{
+        margin:0 20px;
+    }
+    .section_text{
+        text-align: center;
+        display:flex;
+        justify-content:center;
+        margin-top:96vh;
+    }
+    .section_buttons{
+        margin-top:3vh;
+        justify-content: center;
+    }
+}
