@@ -11,31 +11,86 @@
 
 </head>
 <body>
-    <div class = "profile">
+    <div class = "profile" id = "bg">
         <header>
-            <div class = "title">JM Trinidad</div>
+            <a href= "#" onclick = "showAll()"><div class = "logo">JM Trinidad</div></a>
             <div class = "nav-container">
                 <nav class = "nav-links">
-                    <li><a href="#About" class = "nav-links">About</a></li>
-                    <li><a href="#Projects" class = "nav-links">Projects</a></li>
-                    <li><a href="#Contacts" class = "nav-links">Contacts</a></li>
+                    <li><a href="#" class = "nav-links" onclick = "showSection()">About</a></li>
+                    <li><a href="#Projects" class = "nav-links" onclick = "showAll()">Projects</a></li>
+                    <li><a href="#Contacts" class = "nav-links" onclick = "showAll()">Contacts</a></li>
                 </nav>
             </div>
         </header>
-        <section id = "Profile">
-            <img src = "" />
+        <section id = "Profile" class="section">
             <div class = "section_text">
                 <p class = "text_p1">COMPUTER SCIENCE STUDENT</p>
                 <h1>Hello, my name <br />is JM Trinidad</h1>
                 <p class = "text_p2">I'm someone passionate about technology and creativity, currently honing my skills in web development.</p>
                 <div class = "section_buttons">
                     <button class = "button_projects" onclick = "location.href='./#Projects'">Projects</button>
-                    <button class = "button_linkedIn" onclick = "test()">LinkedIn</button>
+                    <button class="button_linkedIn" onclick="window.open('https://www.linkedin.com/in/jean-emmanuel-trinidad-8bab39129')">LinkedIn</button>
+
                 </div>
             </div>
         </section>
     </div>
-
+    <section id = "About" >
+        <div class="about-container">
+            <div class ="section_text">
+                <h1>About me</h1>
+                <p class = "text_p2">I am a responsible, hardworking, and motivated individual who excels under pressure and meets strict deadlines. Along with a creative mindset, I embrace new challenges and opportunities. Additionally, my strong organizational skills and ability to plan ahead ensure effective time management. </p>
+                <div class = "section_buttons">
+                    <button class = "button_projects"  onclick="window.open('./assets/files/resume-example.pdf')">Resume</button>
+                </div>
+            </div>
+            <img class = "about-pic" src = "./assets/images/about-pic.jpg" alt = "JM Trinidad" >
+         </div>
+    </section>
+    </section>
+    <section id = "Projects" class="section">
+        <h2 class = "title">Projects</h2>
+        <div class = "project-containers">
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h2 class = "project_h2">Project A</h2>
+                    <p class = "project_p">I'm someone passionate about technology and creativity, currently honing my skills in web development.</p>
+                    <button class = "button_viewProject">View Project</button>
+                </div>
+                <div class = "project-image">
+                    <img class = "proj-image" src = "./assets/images/projectA.jpg" alt = "Project A" />
+                </div>
+            </div>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h2 class = "project_h2">Project B</h2>
+                    <p class = "project_p">I'm someone passionate about technology and creativity, currently honing my skills in web development.</p>
+                    <button class = "button_viewProject">View Project</button>
+                </div>
+                <div class = "project-image">
+                    <img class = "proj-image"  src = "./assets/images/projectA.jpg" alt = "Project A" />
+                </div>
+            </div>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h2 class = "project_h2">Project C</h2>
+                    <p class = "project_p">I'm someone passionate about technology and creativity, currently honing my skills in web development.</p>
+                    <button class = "button_viewProject">View Project</button>
+                </div>
+                <div class = "project-image">
+                    <img class = "proj-image"  src = "./assets/images/projectA.jpg" alt = "Project A" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id = "Contacts">
+        <div class = "icons">
+            <a href="https://www.instagram.com/jmtrini_" target="_blank" rel="noopener noreferrer"><img src = "./assets/images/iconA.png" alt = "Instagram icon"/></a>
+            <a href="https://www.linkedin.com/in/jean-emmanuel-trinidad-8bab39129" target ="_blank" rel="noopener noreferrer"><img src = "./assets/images/iconB.png" /></a>
+            <a href="mailto:jmtrinidad22@gmail.com" target ="_blank" rel="noopener noreferrer"><img src = "./assets/images/email.png" alt = "Email icon" /></a>
+        </div>
+        <p class = "footer_text">Jean Emmanuel C. Trinidad 2023</p>
+    </footer>
     <script src="./assets/scripts/index.js"></script>
 </body>
 </html>

@@ -15,6 +15,10 @@
     3. Add accessible line-height
     4. Improve text rendering
   */
+  html{
+    scroll-behavior: smooth;
+    transition: scroll-behavior 0.3s ease-out;
+  }
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -48,6 +52,7 @@
 /*CSS RESET ENDS*/
 
 body{
+  background-color: rgb(240, 240, 240);
     color:rgb(52, 51, 51);
     font-family:'Playfair Display',sans-serif;
 }
@@ -80,18 +85,22 @@ a:hover{
     text-underline-offset: 0.5rem;
     
 }
-.title{
-    cursor:default;
+.logo{
+    cursor:pointer;
     color:rgb(41,62,51);
     font-family: 'Comfortaa','sans-serif';
     font-size:1.2rem;
     font-weight:700;
 }
+div>header>a:hover{
+  text-decoration: none;
 
+}
 /* SECTIONS */
-section{
+section,footer{
     height:90vh;
-    margin:0 10rem;
+    margin:5rem 10rem;
+    margin-bottom:0rem;
 }
 
 /* PROFILE */
@@ -112,7 +121,8 @@ section{
   flex-direction: column;
   gap:0.2rem;
   height: 50vh;
-  width:60vh
+  width:60vh;
+  margin-bottom:10rem;
 }
 .text_p1{
   color:rgb(0,154,110);
@@ -130,7 +140,7 @@ h1{
   color:rgb(71, 71, 71);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
-.section_buttons{ 
+.section_buttons{
   font-family: 'Nunito',sans-serif;
   display:flex;
   gap:0.5rem;
@@ -142,20 +152,160 @@ button{
   padding:0.3rem 1rem;
   font-weight: bold;
 }
-
 .button_projects{
   color:rgb(0, 0, 0);
   background-color:rgb(0,154,110);
-  border:2px solid rgb(0, 120, 86);
+  border:2px solid rgba(0, 155, 110);
 }
 .button_projects:hover{
   background-color: white;
-  border:2px solid rgb(0, 120, 86);
+  border:2px solid rgba(0, 155, 110);
 }
 .button_linkedIn{
-  border:2px solid rgb(0, 120, 86);
+  border:2px solid rgba(0, 155, 110);
 }
 .button_linkedIn:hover{
   
   background-color:rgb(0,154,110);
+}
+/* ABOUT */
+#About{
+  margin-top:0rem;
+  height:80vh;
+}
+.about-container{
+  padding-top:1rem;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 5rem;
+  align-items:center;
+}
+.about-container .section_text{
+  padding-top:7rem;
+}
+
+.about-pic{
+  width:500px;
+  height:auto;
+}
+
+/* PROJECTS */
+#Projects{ 
+  height:280vh;
+  
+  margin-bottom:10rem;
+}
+.title {
+  padding-top: 5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  position:relative;
+}
+.title::after {
+  content: '';
+  position: absolute;
+  text-align:center;
+  bottom: -10px;
+  left: 47%;
+  width: 130px;
+  max-width:7%;
+  height: 3px;
+  background-color: rgb(0, 120, 86);
+}
+.project-containers{
+  padding-top:2rem;
+  display:grid;
+  margin:5rem 0;
+  justify-content: center;
+  row-gap:5rem;
+}
+.project-container{
+  width:992px;
+  height:524px;
+  background:white;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  border-radius:25px;
+}
+.project-container:nth-child(even){
+  display:flex;
+  flex-direction: row-reverse;
+  
+}
+.project-container:nth-child(even) img{
+  width:1020px;
+  height:524px;
+  border-radius:25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.project-text{
+  gap:24px;
+  padding: 146.5px 38.88px 145.5px 50.44px;
+  display:flex;
+  flex-direction: column;
+}
+.proj-image{
+  width:496px;
+  height:524px;
+  border-radius:25px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.project_h2{
+  font-family: 'Playfair Display','sans-serif';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
+}
+.project_p{
+  font-family: 'Nunito','sans-serif';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+.button_viewProject{
+  border: 1px solid #25282B;
+  width:150px;
+  height: 43px;
+  background:white;
+  padding: 8px 24px 8px 24px;
+  gap: 0px;
+  border-radius: 24px;
+  opacity: 0px;
+}
+/* FOOTER */
+footer{
+  margin-top:0;
+  text-align: center;
+  height:20vh;
+  
+}
+.icons{
+  display:flex;
+  text-align:center;
+  justify-content: center;
+  gap:2rem;
+}
+footer>div>a>img{
+  height:40px;
+  width:40px;
+}
+.footer_text{
+  cursor:default;
+  font-size: small;
+  margin-top:0.5rem;
+  text-align: center;
+}
+/* ABOUT FUNCTION */
+section{
+    display: block;
+}
+.inactive{
+  display:none;
 }
